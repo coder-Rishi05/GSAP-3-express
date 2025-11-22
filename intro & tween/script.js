@@ -3,7 +3,9 @@
 //     y:400,
 // })
 
-gsap.to(".star", {
+const star = document.querySelector(".star");
+
+gsap.to(star, {
   x: 500, // it means translateX = 500px
   y: 200,
   duration: 4,
