@@ -4,7 +4,7 @@
 // })
 
 const star = document.querySelector(".star");
-
+document.writeln("however we can directly use the css or html attribute or tag to select the element but its better practice if we use javscript variables for it.")
 gsap.to(star, {
   x: 500, // it means translateX = 500px
   y: 200,
