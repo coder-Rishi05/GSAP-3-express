@@ -119,3 +119,82 @@ gsap.to(".star", {
 ## Timeline
 
 it is a container for multiple tweens
+
+Behind the scenes gsap changes the target’s inline style during the animation.
+
+For best performance animate CSS Transform values and opacity:
+
+x
+
+y
+
+rotation
+
+rotationX
+
+rotationY
+
+skewX and skewY
+
+scaleX, scaleY, or just scale
+
+
+
+GSAP can animate any numeric property you throw at it.
+
+width and height
+
+backgroundColor *hyphenated values need to be camelCase
+
+color
+
+padding
+
+left and top (must set position to relative, absolute, or fixed)
+
+vh and vw
+
+
+
+Changing values that are not CSS Transforms or opacity can cause the browser to re-do its layout of the page which in extreme situations can hinder performance. For a few tweens, it’s not the end of the world as some purists make it out to be. 
+
+# from and fromto
+
+from() and fromTo()
+gsap.from() animates from the values you specify to the object’s natural values.
+
+To animate from x and y values of 400, use:
+
+gsap.from(".fred", {x:400, y:400});
+gsap.fromTo() animates from the values you specify to the values you specify.
+
+The 2 objects in the code below are the from vars and to vars.
+
+gsap.fromTo(".fred", {x:400, y:400}, {x:200, y:200});
+For best results make sure the from vars and to vars have the same properties.
+
+
+fromTo() Exercise
+1: Open: https://codepen.io/snorkltv/pen/qBBxPme
+
+2: Type the following code:
+
+gsap.fromTo(".fred", 
+    {x:700, y:400, scale:1, opacity:0},
+		{x:400, y:200, scale:3, opacity:1, duration:3});
+3: Experiment with other properties.
+
+### Special Properties: Delay and Repeat
+Special properties define how the animation should run and what it should do. Special properties are not animated.
+
+delay: how much time should transpire before animation begins
+
+repeat: how many times the animation should repeat
+
+yoyo: when set to true the animation will play back and forth
+
+repeatDelay: how much time should transpire between each repeat
+
+
+
+An animation will repeat indefinitely if you set repeat:-1
