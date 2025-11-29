@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <main>
+        <div class="star star1"></div>
+    </main>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/gsap.min.js"
+        integrity="sha512-NcZdtrT77bJr4STcmsGAESr06BYGE8woZdSdEgqnpyqac7sugNO+Tr4bGwGF3MsnEkGKhU2KL2xh6Ec+BqsaHA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script>
+        const one = document.querySelector(".star1");
+
+        gsap.to(one, {
+            x: 600,
+            delay:1,
+            y: 200,
+            duration: 5,
+            ease: "rough",
+            // custom ease function for bounce out
+            // ease: t => {
+            //     // Robert Penner's bounceOut
+            //     if (t < 1 / 2.75) {
+            //         return 7.5625 * t * t;
+            //     } else if (t < 2 / 2.75) {
+            //         t -= 1.5 / 2.75;
+            //         return 7.5625 * t * t + 0.75;
+            //     } else if (t < 2.5 / 2.75) {
+            //         t -= 2.25 / 2.75;
+            //         return 7.5625 * t * t + 0.9375;
+            //     } else {
+            //         t -= 2.625 / 2.75;
+            //         return 7.5625 * t * t + 0.984375;
+            //     }
+            // }
+        });
+
+    </script>
+</body>
+
+</html>

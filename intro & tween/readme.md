@@ -205,3 +205,14 @@ ease:”bounce.inOut” will bounce on the way in and out
 Some eases can be configured
 
 ease:”back.config(6)” will have a stronger overshoot
+
+### Ease curves
+
+
+- important notes about ease curves
+
+  - eases dictate the rate of change of an animation
+  - eases dictate the direction of change of an animation (bounce, back, elastic, etc)
+  - steep curves cause quick rate of change
+  - flat curves cause slow rate of change
+  - you can create your own ease curve using Custom Ease.
