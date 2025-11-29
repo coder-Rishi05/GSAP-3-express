@@ -8,7 +8,7 @@ document.writeln("however we can directly use the css or html attribute or tag t
 gsap.to(star, {
   x: 500, // it means translateX = 500px
   y: 200,
-  duration: 4, // deafult duration is 500ms
+  duration: 4, 
   delay: 2,
   rotation: 360,
   scale: 1.2,

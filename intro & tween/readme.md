@@ -96,7 +96,7 @@ main {
 gsap.to(".star", {
   x: 500, // it means translateX = 500px
   y: 200,
-  duration: 4,
+  duration: 4, // deafult duration is 500ms
   delay: 2,
   rotation: 360,
   scale: 1.2,
@@ -149,6 +149,7 @@ Changing values that are not CSS Transforms or opacity can cause the browser to 
 # from and fromto
 
 from() and fromTo()
+
 gsap.from() animates from the values you specify to the object’s natural values.
 
 To animate from x and y values of 400, use:
